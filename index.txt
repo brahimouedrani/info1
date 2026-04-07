@@ -1,1 +1,45 @@
 "TP Git groupe 6" 
+
+
+📁 1. Créer ton projet
+mkdir projet
+cd projet
+📄 2. Créer fichier
+echo "texte" > index.txt
+🔧 3. Initialiser Git
+git init
+➕ 4. Ajouter fichiers
+git add .
+💾 5. Commit
+git commit -m "first commit"
+🔗 6. Connecter au repo GitHub existant
+git remote remove origin
+git remote add origin https://github.com/USERNAME/REPO.git
+🚀 7. Envoyer sur GitHub
+git branch -M main
+git push -u origin main
+✏️ 🔁 Modifier un fichier (très important)
+8. Modifier
+notepad index.txt
+9. Envoyer modification
+git add .
+git commit -m "update file"
+git push
+⚠️ ERREUR FRÉQUENTE
+❌ “fetch first / non-fast-forward”
+
+👉 GitHub contient déjà des fichiers
+
+✅ Solution
+git pull origin main --allow-unrelated-histories
+git add .
+git commit -m "merge"
+git push
+🧠 RÈGLE ULTRA SIMPLE
+🔁 Cycle normal Git :
+git add .
+git commit -m "message"
+git push
+🔄 Si problème GitHub :
+git pull
+git push
